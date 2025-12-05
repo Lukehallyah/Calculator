@@ -33,3 +33,30 @@ main{
     height: 80%;
     border: 2px solid black;
 }
+
+.middle{
+    display: flex;
+    height: 79%;
+    gap: 0;
+
+}
+
+.numbers{
+    width:65%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: auto;
+}
+
+.equals{
+    grid-column: 2/span 2;
+}
+
+.operators{
+    width: 35%;
+    height 100%;
+    display: grid;
+    grid-template-columns: 100%;
+
+}
