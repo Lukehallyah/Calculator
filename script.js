@@ -32,6 +32,7 @@ function equals(){
     else if(oper==="*") result= mult(a,b);
     else if(oper==="/") result= div(a,b);
 
+    result = result.toFixed(3);
     inputField.innerHTML=result;
 }
 
@@ -42,10 +43,10 @@ let inputField = document.querySelector('.inputField');
 let clear = document.querySelector('.clear');
 
 function showNumber(num){
-    let current ="";
-    current+=num;
-    document.querySelector(".inputField").innerHTML+=current;
+    if (num === "." && inputField.innerHTML.includes(".")) return;
+    inputField.innerHTML += num;
 }
+
 
 
 function clearBox(){

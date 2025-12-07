@@ -16,7 +16,10 @@ main{
     /*REMEMBER ABOVE!! CAN MAKE SQUARE EASILY. 
     THE HEIGHT CAN BE VW TOO*/
     border: 2px solid black;
-    border-radius: 5%;;
+    border-radius: 5%;
+    padding-bottom: 1.5%;
+    background-color: rgb(44, 44, 43);
+
 }
 
 .top{
@@ -25,17 +28,19 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid black;
+    background-color: rgb(44, 44, 43);
+    border-radius: 50%;
 }
 
 .inputField{
     width: 80%;
     height:70%;
     border: 2px solid black;
-    font-size: 2rem;
+    font-size: 4rem;
     display:flex;
     justify-content: right;
     align-items: flex-end;
+    background-color: rgb(110, 247, 110);
 }
 
 .middle{
@@ -47,18 +52,30 @@ main{
     background-color: grey;
     border-bottom-left-radius: 6%;
     border-bottom-right-radius: 6%;
+    padding: 2% 0;
 }
 
 .numbers{
     width:65%;
     height: 100%;
     display: grid;
-    grid-template-columns: 33% 33% 34%;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    box-sizing: border-box;
+    gap: 1%;
+}
+
+.numbers button{
+    height:100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(61, 60, 60);
+    color: white;
+
 }
 
 .btn{
-    border-radius: 5px;
+    border-radius: 20%;
 }
 
 .operators{
@@ -68,11 +85,12 @@ main{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    gap: 2.5%;
+    gap: 1%;
 }
 
 .operators button{
-    height: 23%;
+    height: 18%;
     width: 100%;
     box-sizing: border-box;
+    background-color: rgb(228, 238, 236);
 }
