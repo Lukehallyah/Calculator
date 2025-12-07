@@ -14,12 +14,21 @@ function div(a,b){
     return a/b
 };
 
+
+
+
+
+
+
 function operator(op){
     num1=inputField.innerHTML;
     oper=op;
     inputField.innerHTML='';
 }
-
+//function operator: stores the num1 at time operator is chosen(oper=op that is on the button. then clears for num2)
+//<button onclick="operator('*')" class="btn multiply">X</button> 
+// operator chose "*" in this case::: oper=* (For use in equals() function).
+//stores num1. chooses the oper=(*,+,-,/) for equals(), clears inputField so num2 can be stored
 
 function equals(){
     num2=inputField.innerHTML;
@@ -36,9 +45,19 @@ function equals(){
     inputField.innerHTML=result;
 }
 
+//What equals() does
+//stores num2
+// parses both num1 and num2 and stores in a variable. Otherwise it's a string
+//if else statements that do the actual work. THIS IS WHY OPER=OP WAS IMPORTANT
+//RESULT- LOOK HOW IT'S UTILISED
+// result is fixed to 3 decimal points
+//inputField = the results
 
-//the function: has to put multiple values into a string
-//   and then parseInt() so that it becomes a number.
+
+
+
+
+
 let inputField = document.querySelector('.inputField');
 let clear = document.querySelector('.clear');
 
