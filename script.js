@@ -1,6 +1,6 @@
 let inputField = document.querySelector('.inputField');
 let clear = document.querySelector('.clear');
-
+let justCalculated=false;
 let num1="";
 let num2="";
 let oper=null;
@@ -14,6 +14,12 @@ let oper=null;
 
 
 function showNumber(num){
+    if(justCalculated){
+        inputField.innerHTML="";
+        justCalculated=false;
+    }
+    
+    
     if (num === "." && inputField.innerHTML.includes(".")) return;
     inputField.innerHTML += num;
 }
@@ -77,11 +83,13 @@ function operator(op){
 function equals(){
     num2=inputField.innerHTML;
     if(oper === "/" && parseFloat(num2) === 0){
-        inputField.innerHTML = "are You Sure?";
+        inputField.innerHTML = "Are You Sure?";
         num1 = "";
         num2 = "";
         result = null;
         oper = null;
+        
+
         return;
     }
     
@@ -102,6 +110,7 @@ function equals(){
     num1=parseFloat(result);
     num2="";
     oper=null;
+    justCalculated=true;
     //What I know:: result is everything so far. It will show. The functions worked.
     // tried ::: let result=a; to reset the calculation and make it a. Didn't work
 }
